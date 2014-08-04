@@ -18,5 +18,6 @@ public class Frame extends JFrame{
 		canvasShortcut.addKeyListener(new Keys(canvasShortcut));
 		canvasShortcut.addMouseListener(new Mouse(canvasShortcut));
 		canvasShortcut.setFocusable(true);
+		canvasShortcut.addMouseMotionListener(new Mouse(canvasShortcut));
 	}
 }
