@@ -13,7 +13,7 @@ public class Frame extends JFrame{
 	public void frameDrawing(){
 		setTitle("Test Frame");
 		getContentPane().setBackground(Color.black);
-		Toolkit tk = Toolkit.getDefaultToolkit();  
+		//Toolkit tk = Toolkit.getDefaultToolkit();  
 		//int xSize = ((int) tk.getScreenSize().getWidth());  
 		//int ySize = ((int) tk.getScreenSize().getHeight());  
 		//setSize(xSize,ySize); 
