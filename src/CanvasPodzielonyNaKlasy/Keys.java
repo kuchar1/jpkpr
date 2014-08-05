@@ -47,6 +47,22 @@ public class Keys implements KeyListener {
 			System.out.println("zoom-");
 			paintInFrameSkrut.repaint();
 		}
+		
+		if (key == KeyEvent.VK_C) {
+			
+			if (paintInFrameSkrut.tlo == true){
+				paintInFrameSkrut.tlo = false;
+				System.out.println("TLO");
+				paintInFrameSkrut.repaint();
+			}
+			else{
+			paintInFrameSkrut.tlo = true;
+			System.out.println("TLO");
+			paintInFrameSkrut.repaint();
+			}
+		}	
+			
+		
 	}
 
 	//@Override

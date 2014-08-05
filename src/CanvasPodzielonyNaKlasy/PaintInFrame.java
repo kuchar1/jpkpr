@@ -10,11 +10,15 @@ int y=20;
 int zoom=40;
 String MOUSEX="x";
 String  MOUSEY="y";
-
+boolean tlo=false;
 
 	public void paint(Graphics g){
-		Image Beagle = new ImageIcon("Beagle.jpg").getImage();
-		g.drawImage(Beagle, 0, 0, this);
+		
+		if (tlo == true){
+			Image Beagle = new ImageIcon("Beagle.jpg").getImage();
+			g.drawImage(Beagle, 0, 0, this);
+		}
+		
 		g.setColor(Color.BLUE);
 		g.drawOval(x, y, zoom, zoom);
 		g.setColor(Color.WHITE);

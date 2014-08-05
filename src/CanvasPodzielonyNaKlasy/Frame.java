@@ -1,5 +1,7 @@
 package CanvasPodzielonyNaKlasy;
 
+import java.awt.Color;
+
 import javax.swing.JFrame;
 
 public class Frame extends JFrame{
@@ -10,7 +12,9 @@ public class Frame extends JFrame{
 	public void paintTheFrame(){
 		setSize(250,230);
 		setTitle("Test Frame");
+		
 		add(canvasShortcut);
+		//setBackground(Color.BLACK); //<------ dlaczego nie dziala?
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(getGlassPane());
 		setVisible(true);
