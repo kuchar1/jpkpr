@@ -3,6 +3,9 @@ package Satelita;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
 
 public class Painting extends Canvas{
 
@@ -13,11 +16,16 @@ public class Painting extends Canvas{
 	int BallY=150;
 	int orbitX =250-5;
 	int orbitY =110-5;
+	int TloX=0;
 	
 	
 	public void paint(Graphics g){
 		
-		g.setColor(Color.WHITE);
+		
+		
+		Image Tlo = new ImageIcon("Tlo.jpg").getImage();
+		g.drawImage(Tlo, TloX, 0, this);
+		g.setColor(Color.DARK_GRAY);
 		g.fillRect(x, y, 100, 17);
 		g.fillOval(BallX, BallY, 70, 70);
 		g.drawOval(250-(150/2),110 , 150, 150);

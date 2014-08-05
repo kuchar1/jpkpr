@@ -23,9 +23,11 @@ public class BallPhysic implements Runnable{
 				
 			refPainting1.orbitX = (int) (refPainting1.orbitX+(Math.cos(i)*75));	
 			refPainting1.orbitY = (int) (refPainting1.orbitY+(Math.sin(i)*75));
-				
+			
+			refPainting1.TloX -= 1;	
 			}
 			System.out.println("Wartosc orbitX: " + Math.cos(i)+ i);
+			
 			try {
 				Thread.sleep(30);
 			} catch (InterruptedException e) {
