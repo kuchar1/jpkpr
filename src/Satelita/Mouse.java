@@ -16,7 +16,12 @@ public class Mouse implements MouseMotionListener {
 	}
 
 	public void mouseDragged(MouseEvent e) {
-
+		refPainting.x1 = (int) e.getX();
+		refPainting.x2=refPainting.x1+10;
+		refPainting.y1 = (int) e.getY();
+		refPainting.y2=refPainting.y1+10;
+		
+		
 	}
 
 	public void mouseMoved(MouseEvent e) {
