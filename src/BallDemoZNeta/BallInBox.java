@@ -21,7 +21,7 @@ package BallDemoZNeta;
 	public class BallInBox extends JPanel {
 	    //============================================== fields
 	    //... Instance variables representing the ball.
-	    private Ball m_ball         = new Ball(0, 0, 3, 3);
+	    private Ball m_ball         = new Ball(0, 0, 30, 30);
 	    
 	    //... Instance variables for the animiation
 	    private int   m_interval  = 35;  // Milliseconds between updates.

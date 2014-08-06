@@ -15,7 +15,7 @@ public class RepainThread implements Runnable {
 			refPaintin.repaint();
 			//System.out.println("repaint");
 			try {
-				Thread.sleep(30);
+				Thread.sleep(35);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

@@ -16,7 +16,9 @@ public class Painting extends Canvas{
 	int BallY=150;
 	int orbitX =250-5;
 	int orbitY =110-5;
-	int TloX=0;
+	int TloX;
+	int x1,y1,x2,y2;
+	
 	
 	
 	public void paint(Graphics g){
@@ -25,6 +27,8 @@ public class Painting extends Canvas{
 		
 		Image Tlo = new ImageIcon("Tlo.jpg").getImage();
 		g.drawImage(Tlo, TloX, 0, this);
+		g.drawLine(x1, y1, x2, y2);
+		
 		g.setColor(Color.DARK_GRAY);
 		g.fillRect(x, y, 100, 17);
 		g.fillOval(BallX, BallY, 70, 70);
