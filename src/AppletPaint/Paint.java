@@ -18,10 +18,10 @@ public class Paint extends Applet implements  KeyListener, MouseListener, MouseM
 	 
 	 
 	public Paint(){
-		addKeyListener(this);
-		addMouseListener(this);
+		//addKeyListener(this);
+		//addMouseListener(this);
 		addMouseMotionListener(this);
-		setBackground(Color.white);
+		//setBackground(Color.white);
 		
 		
 	}
@@ -42,7 +42,7 @@ public class Paint extends Applet implements  KeyListener, MouseListener, MouseM
 		}
 	}
 
-	@Override
+	//@Override
 	public void mouseDragged(MouseEvent e) {
 		x2=e.getX();
 		y2=e.getY();
@@ -51,25 +51,25 @@ public class Paint extends Applet implements  KeyListener, MouseListener, MouseM
 		y=y2;
 	}
 
-	@Override
+	//@Override
 	public void mouseMoved(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	//@Override
 	public void mouseClicked(MouseEvent e) {
 	  
 		
 	}
 
-	@Override
+	//@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	//@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
@@ -77,33 +77,33 @@ public class Paint extends Applet implements  KeyListener, MouseListener, MouseM
 	
 	
 
-	@Override
+	//@Override
 	public void mousePressed(MouseEvent e) {
 		x=e.getX();
 		y=e.getY();
 		rysuj(this.getGraphics());
 	}
 
-	@Override
+	//@Override
 	public void mouseReleased(MouseEvent e) {
 		x=-1;
 		x2=-1;
 		
 	}
 
-	@Override
+	//@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	//@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	//@Override
 	public void keyTyped(KeyEvent e) {
 		if(e.getKeyChar() == 'n')
 			nnw=true;

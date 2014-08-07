@@ -10,7 +10,7 @@ public class AppletCore extends Applet{
 	public void init(){
 		setBackground(Color.black);
 		setSize(500, 500);
-		add(canvas1);
+		add(new Painting());
 		addMouseMotionListener(new MouseCommands(canvas1));
 	}
 }
