@@ -3,7 +3,7 @@ package AppletsFromHome;
 import java.awt.*;
 import java.applet.*;
 
-public class Anim2 extends Applet implements Runnable
+public class Anim2 extends Applet /*implements Runnable*/
 {
   //private static final long serialVersionUID = -705555689585339843L;
   /*public Thread thread;
@@ -14,9 +14,9 @@ public class Anim2 extends Applet implements Runnable
    */
   public void init()
   {
-	  setBackground(Color.black);
+	  //setBackground(Color.black);
 	  setSize(500, 500);
-	  setName("Paint");
+	 
 	  
 	  
    /* thread = null;
