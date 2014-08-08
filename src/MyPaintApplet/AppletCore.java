@@ -1,16 +1,23 @@
 package MyPaintApplet;
 
-import java.applet.Applet;
-import java.awt.Color;
+import javax.swing.JFrame;
 
-public class AppletCore extends Applet{
+public class AppletCore extends JFrame{
 
+	
 	Painting canvas1 = new Painting();
 		
-	public void init(){
-		setBackground(Color.black);
+	public void makeFrame(){
 		setSize(500, 500);
-		add(new Painting());
-		addMouseMotionListener(new MouseCommands(canvas1));
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		add(canvas1);
+		canvas1.addMouseMotionListener(new MouseCommands(canvas1));
+		
 	}
+	
+	
+	
+	
+	
 }

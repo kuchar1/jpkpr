@@ -2,10 +2,19 @@ package AppletPaint;
 import java.awt.*;
 import java.applet.*;
 
+
+
+
+
 public class AppletX2 extends Applet implements Runnable
 {
+	
+Thread thread,thread2;
+	
+	
+	
   //private static final long serialVersionUID = -705555689585339843L;
-  public Thread thread;
+  
   Image image;
   Graphics gc;
   int x;   // aktualna pozycja 
@@ -17,7 +26,7 @@ public class AppletX2 extends Applet implements Runnable
   {
 	setSize(1250, 200);
     thread = null;
-    //this.setBounds(0, 0, 1250, 200);
+    this.setBounds(0, 0, 1250, 200);
     w=getSize().width;
     h=getSize().height;
     x=0;
@@ -34,6 +43,10 @@ public class AppletX2 extends Applet implements Runnable
       thread = new Thread(this);
       thread.start();
     }
+    if (thread2 == null) {
+        thread2 = new Thread(this);
+        thread2.start();
+      }
   }
 
   public void stop()
@@ -77,6 +90,20 @@ public class AppletX2 extends Applet implements Runnable
         Thread.sleep(30);
       } catch(InterruptedException e){}
     }
+    while(thread2!=null){
+    	
+    	System.out.println("2341");
+    	try {
+			Thread.sleep(20);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	
+    }
+    
+    
    }
    
    synchronized public void paint(Graphics g){
