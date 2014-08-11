@@ -1,9 +1,12 @@
 package MyOwnPaint;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -79,7 +82,7 @@ public class FrameForPaint extends JFrame implements ActionListener{
 			System.exit(0);
 		}
 		
-		if ( comStr.equals("About")) {
+		else if ( comStr.equals("About")) {
 			frameAbout = new JFrame();
 			frameAbout.setSize(250,100);
 			frameAbout.setVisible(true);
@@ -89,21 +92,36 @@ public class FrameForPaint extends JFrame implements ActionListener{
 			jlab.setText("My first Paint program with Menu v0.1 :)");
 		}	
 			
-		if	( comStr.equals("Save")) {
-			saveFile = new JFileChooser();
-            saveFile.showSaveDialog(null);
-		}
-		
-        if	( comStr.equals("Open")) {	
+		else if	( comStr.equals("Save")) {
+			try {
+		        FileOutputStream fos = new FileOutputStream("c:/plik.bmp");
+		        ObjectOutputStream oos = new ObjectOutputStream(fos);
+		        oos.writeObject(paint1);
+		        oos.flush();
+		        oos.close();
+		        fos.close();
+		      } catch (Exception ex) {
+		        System.out.println("Trouble writing display list vector");
+		      }
+		}    
+            
+        else if	( comStr.equals("Open")) {	
             openFile = new JFileChooser();
             openFile.showOpenDialog(null);
-            //if (openFile.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+           if (openFile.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
             	
             //	File plik = openFile.getSelectedFile();
             //	JOptionPane.showMessageDialog(null, "Wybrany plik to: " + openFile.getName());
            }
-            
-            
+          
+        
+       
+        
+        
+        
+        
+        
+        
             
             
             
@@ -134,6 +152,21 @@ public class FrameForPaint extends JFrame implements ActionListener{
         
 	}
 }
+	/*
+	 public void showOpenFileDialog() {
+	        JFileChooser fileChooser = new JFileChooser();
+	        fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+	        fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+	        //fileChooser.addChoosableFileFilter(new FileNameExtensionFilter("PDF Documents", "pdf"));
+	       // fileChooser.addChoosableFileFilter(new FileNameExtensionFilter("MS Office Documents", "docx", "xlsx", "pptx"));
+	        fileChooser.addChoosableFileFilter(new FileNameExtensionFilter("Images", "jpg", "png", "gif", "bmp"));
+	        fileChooser.setAcceptAllFileFilterUsed(true);
+	        int result = fileChooser.showOpenDialog(this);
+	        if (result == JFileChooser.APPROVE_OPTION) {
+	            File selectedFile = fileChooser.getSelectedFile();
+	            System.out.println("Selected file: " + selectedFile.getAbsolutePath());
+	        }
+	    }*/
 }
 
 
