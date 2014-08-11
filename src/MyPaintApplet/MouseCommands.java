@@ -13,6 +13,7 @@ public class MouseCommands implements MouseMotionListener{
 	public void mouseDragged(MouseEvent e) {
 		refToPainting.POINTX = (int) e.getX();
 		refToPainting.POINTY = (int) e.getY();
+		refToPainting.paint(refToPainting.getGraphics());
 	}
 
 	public void mouseMoved(MouseEvent e) {}

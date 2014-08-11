@@ -9,9 +9,10 @@ public class AppletCore extends JFrame{
 		
 	public void makeFrame(){
 		setSize(500, 500);
-		setVisible(true);
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		add(canvas1);
+		setVisible(true);
 		canvas1.addMouseMotionListener(new MouseCommands(canvas1));
 		
 	}

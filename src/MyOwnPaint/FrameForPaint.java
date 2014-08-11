@@ -97,7 +97,7 @@ public class FrameForPaint extends JFrame implements ActionListener{
         if	( comStr.equals("Open")) {	
             openFile = new JFileChooser();
             openFile.showOpenDialog(null);
-            ///if (openFile.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+            //if (openFile.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
             	
             //	File plik = openFile.getSelectedFile();
             //	JOptionPane.showMessageDialog(null, "Wybrany plik to: " + openFile.getName());
