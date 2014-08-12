@@ -1,4 +1,4 @@
-package PodstawyKonstruktorZmianaWartosciXY;
+package SimpleConstructorValueXYChange;
 
 public class Start {
 

@@ -14,10 +14,7 @@ public class Thread2 implements Runnable {
 	}
 
 	public AtomicInteger decrement() {
-		
-		 
 		refThreadsAtomic2.c.set(50);
-		
 		return refThreadsAtomic2.c;
 	}
 
@@ -25,18 +22,6 @@ public class Thread2 implements Runnable {
 	public void run() {
 		for (int i = 0; i < 5; i++) {
 			decrement();
-			
-			//System.out.println("Thread2 enabled");
-			//System.out.println(refThreadsAtomic2.c);
 		}
-//			try {
-//				Thread.sleep(50);
-//			} catch (InterruptedException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-		
-		
-
 	}
 }

@@ -12,34 +12,22 @@ public class Thread1 implements Runnable {
 		t1 = new Thread(this);
 		t1.start();
 	}
-
+	
 	public AtomicInteger increment() {
-		
 		refThreadsAtomic.c.incrementAndGet();
-		
 		return refThreadsAtomic.c;
 	}
-
+	
 	@Override
 	public void run() {
-		
+
 		for (int i = 0; i < 10000; i++) {
 			increment();
-			//
-			//System.out.println("Thread1 enabled");
-			//System.out.println(refThreadsAtomic.c);
-		if (refThreadsAtomic.c.get() == 50) {
-			System.out.println("Wystapila zmaina przez Thread2 "+i+"----------------------------");
-		}
-			
-//		try {
-//				Thread.sleep(500);
-//			} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-		}
-		
 
+			if (refThreadsAtomic.c.get() == 50) {
+				System.out.println("Wystapila zmaina przez Thread2 " + i
+						+ "----------------------------");
+			}
+		}
 	}
 }
