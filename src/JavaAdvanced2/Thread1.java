@@ -23,12 +23,15 @@ public class Thread1 implements Runnable {
 	@Override
 	public void run() {
 		
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 10000; i++) {
 			increment();
 			//
-			System.out.println("Thread1 enabled");
-			System.out.println(refThreadsAtomic.c);
-		
+			//System.out.println("Thread1 enabled");
+			//System.out.println(refThreadsAtomic.c);
+		if (refThreadsAtomic.c.get() == 50) {
+			System.out.println("Wystapila zmaina przez Thread2 "+i+"----------------------------");
+		}
+			
 //		try {
 //				Thread.sleep(500);
 //			} catch (InterruptedException e) {

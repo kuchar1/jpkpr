@@ -23,12 +23,12 @@ public class Thread2 implements Runnable {
 
 	@Override
 	public void run() {
-		
+		for (int i = 0; i < 5; i++) {
 			decrement();
 			
-			System.out.println("Thread2 enabled");
-			System.out.println(refThreadsAtomic2.c);
-			
+			//System.out.println("Thread2 enabled");
+			//System.out.println(refThreadsAtomic2.c);
+		}
 //			try {
 //				Thread.sleep(50);
 //			} catch (InterruptedException e) {
