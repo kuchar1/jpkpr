@@ -3,6 +3,7 @@ package MyOwnPaint;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
@@ -12,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 
 
@@ -108,13 +110,28 @@ public class FrameForPaint extends JFrame implements ActionListener{
 		}    
             
         else if	( comStr.equals("Open")) {	
-            openFile = new JFileChooser();
-            openFile.showOpenDialog(null);
-           if (openFile.showOpenDialog(null) == JFileChooser.APPROVE_OPTION){
+        	JFileChooser openFile = new JFileChooser();
+        	openFile.setCurrentDirectory(new File(System.getProperty("user.home")));
+        	openFile.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        	openFile.addChoosableFileFilter(new FileNameExtensionFilter("Images", "jpg", "png", "gif", "bmp"));
+        	openFile.setAcceptAllFileFilterUsed(true);
+        	int result = openFile.showOpenDialog(this);
+        	if (result == JFileChooser.APPROVE_OPTION) {
+ 	            File selectedFile = openFile.getSelectedFile();
+ 	            System.out.println("Selected file: " + selectedFile.getAbsolutePath());
+        	
+            
+          
+        	   
+			
+			
+	       
+	          
+        	   
             	
             //	File plik = openFile.getSelectedFile();
             //	JOptionPane.showMessageDialog(null, "Wybrany plik to: " + openFile.getName());
-           }
+           
           
         
        
@@ -170,11 +187,11 @@ public class FrameForPaint extends JFrame implements ActionListener{
 	        }
 	    }*/
 }
-
+	}
 
 // Beagle = new ImageIcon("Beagle.jpg").getImage();
 // /g2.drawImage(Beagle, x, y, this);
-
+}
 
 
 
