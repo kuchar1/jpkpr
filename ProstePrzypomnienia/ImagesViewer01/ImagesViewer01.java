@@ -33,7 +33,7 @@ public class ImagesViewer01 extends JFrame implements ActionListener {
 			g.drawImage(image, 0, 20, this);
 			g.setColor(Color.black);
 			g.fillRect(0, 0, 50, 50);
-			System.out.println("masakra");
+			System.out.println("jest Paint!");
 		}
 	
 	public void drawFrame() {
@@ -106,8 +106,9 @@ public class ImagesViewer01 extends JFrame implements ActionListener {
 		else {
 			width = image.getWidth();
 			height = image.getHeight();
-			System.out.println("jest fota" + width + " " + height);
+			System.out.println("Jest zaladowany obraz. Wymiary obrazu: Szer: " + width + " Wys: " + height);
 			resize(width, height);
+			
 		}
 		
 	}
