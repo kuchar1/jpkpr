@@ -1,11 +1,11 @@
 package OpeningFiles;
 
 import java.awt.Graphics;
-<<<<<<< HEAD
-=======
+
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
->>>>>>> branch 'master' of https://github.com/kuchar1/jpkpr
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +18,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-<<<<<<< HEAD
+
 public class JpgReader extends JFrame {
 
 	int height;

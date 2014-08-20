@@ -1,4 +1,4 @@
-package MyOwnPaint;
+package FirstGifSave;
 
 
 
@@ -23,9 +23,9 @@ public class PaintZNeta extends JPanel
     {
         super();
  
-        File outputfile2 = new File("RotatedTomato.gif");
+        File outputfile2 = new File("RotatedTomato.jpg");
  
-        TomatoImage = ImageIO.read(getClass().getClassLoader().getResource("123.jpg"));
+        TomatoImage = ImageIO.read(getClass().getClassLoader().getResource("Images/123.jpg"));
  
         BufferedImage Buf_Image = new BufferedImage(800, 800, BufferedImage.TYPE_INT_RGB);
  

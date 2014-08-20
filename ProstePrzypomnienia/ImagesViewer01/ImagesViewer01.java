@@ -29,12 +29,12 @@ public class ImagesViewer01 extends JFrame implements ActionListener {
 		frame1.drawFrame();
 		
 	}
-	public void paint(Graphics g) {
-			g.drawImage(image, 0, 20, this);
-			g.setColor(Color.black);
-			g.fillRect(0, 0, 50, 50);
-			System.out.println("jest Paint!");
-		}
+//	public void paint(Graphics g) {
+//			g.drawImage(image, 0, 20, this);
+//			g.setColor(Color.black);
+//			g.fillRect(0, 0, 50, 50);
+//			System.out.println("jest Paint!");
+//		}
 	
 	public void drawFrame() {
 		
@@ -62,7 +62,7 @@ public class ImagesViewer01 extends JFrame implements ActionListener {
 		jmiOpen.addActionListener(this);
 		jmiSave.addActionListener(this);
 		jmiExit.addActionListener(this);
-		paint(getGraphics());
+		//paint(getGraphics());
 	}
 
 	@Override

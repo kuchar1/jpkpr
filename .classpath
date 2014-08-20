@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="ProstePrzypomnienia"/>
 	<classpathentry kind="src" path="java XML Frameworks"/>
+	<classpathentry kind="src" path="Zapisywanie"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
